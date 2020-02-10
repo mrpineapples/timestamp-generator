@@ -7,14 +7,7 @@ import "./App.css";
 
 function App() {
     const [startDate, setStartDate] = useState(new Date());
-    // console.log(new Date().getTime());
-    // const nyDate = startDate.toLocaleString("en-US", {
-    //     timeZone: "America/New_York",
-    // });
-    // const userOffset = startDate.getTimezoneOffset() * 60 * 1000;
-    // const EASTERN_OFFSET = 5 * 60 * 60 * 1000;
     const newYork = moment(startDate).tz("America/New_York");
-    // console.log("newYork", newYork.format("MMM DD YYYY HH:mm:ss A"));
 
     return (
         <div className="App">
@@ -28,6 +21,10 @@ function App() {
             />
             <h1>Time in New York</h1>
             <p>{newYork.format("MMM DD YYYY h:mm A")}</p>
+            <h1>
+                Enter this time (unix) into forge:{" "}
+                {Math.floor(startDate.getTime() / 1000)}
+            </h1>
         </div>
     );
 }
