@@ -1,8 +1,7 @@
 import React from "react";
-import PropTypes from "prop-types";
 import CopyButtonContainer from "./styles";
 
-const CopyButton = (props) => {
+const CopyButton = () => {
     const copyTimeStamp = () => {
         const copyText = document.querySelector("#timestamp-value").textContent;
         const tempInput = document.createElement("input");
@@ -17,7 +16,5 @@ const CopyButton = (props) => {
         <CopyButtonContainer onClick={copyTimeStamp}>Copy</CopyButtonContainer>
     );
 };
-
-CopyButton.propTypes = {};
 
 export default CopyButton;
