@@ -1,5 +1,5 @@
 import React from "react";
-import CopyButtonContainer from "./Styles";
+import CopyButtonContainer from "./styles";
 
 const CopyButton = () => {
     const copyTimeStamp = () => {

@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import TimestampContainer from "./Styles";
+import TimestampContainer from "./styles";
 import CopyButton from "../CopyButton";
 
 const Timestamp = ({ date }) => {

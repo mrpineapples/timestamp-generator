@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 // eslint-disable-next-line import/no-named-default
 import { default as ReactDatePicker } from "react-datepicker";
-import DatePickerContainer from "./Styles";
+import DatePickerContainer from "./styles";
 
 import "react-datepicker/dist/react-datepicker.css";
 
