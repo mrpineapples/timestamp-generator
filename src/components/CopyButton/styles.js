@@ -7,6 +7,7 @@ const CopyButtonContainer = styled.button`
     overflow: visible;
     background: transparent;
     color: #3490dc;
+    font-family: inherit;
     font-size: 12px;
     line-height: normal;
     -webkit-font-smoothing: inherit;
