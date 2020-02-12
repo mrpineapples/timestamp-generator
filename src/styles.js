@@ -4,10 +4,8 @@ const AppContainer = styled.div`
     display: block;
 
     .content {
-        &__date {
-            display: flex;
-            justify-content: center;
-        }
+        display: flex;
+        justify-content: center;
     }
 `;
 

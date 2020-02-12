@@ -10,7 +10,8 @@ const App = () => {
     return (
         <AppContainer>
             <Header />
-            <div className="content__date">
+            <div className="content">
+                <span className="content__info">Choose a Date & Time:</span>
                 <DatePicker startDate={startDate} setStartDate={setStartDate} />
                 <Timestamp date={startDate} />
             </div>

@@ -9,7 +9,6 @@ import "react-datepicker/dist/react-datepicker.css";
 const DatePicker = ({ startDate, setStartDate }) => {
     return (
         <DatePickerContainer>
-            <span className="title">Choose a Date & Time:</span>
             <ReactDatePicker
                 className="date-input"
                 selected={startDate}
