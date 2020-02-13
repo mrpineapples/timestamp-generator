@@ -11,10 +11,36 @@ const AppContainer = styled.div`
     }
 
     .timestamp-converter {
-        input {
-            margin-left: 10px;
-            border: none;
-            border-bottom: 1px solid #000000;
+        margin-top: 40px;
+
+        &__cta {
+            display: flex;
+            justify-content: center;
+
+            &__input {
+                width: 85px;
+                margin-left: 10px;
+                border: none;
+                border-bottom: 1px solid #000000;
+                text-align: center;
+            }
+        }
+
+        &__results {
+            width: 100%;
+            margin-top: 20px;
+
+            &__title {
+                width: max-content;
+                margin: 0 auto;
+                border-bottom: 2px solid #000000;
+            }
+
+            &__value {
+                margin-top: 10px;
+                text-align: center;
+                font-size: 14px;
+            }
         }
     }
 

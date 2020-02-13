@@ -10,8 +10,13 @@ const App = () => {
 
     const locale = "en-US";
     const dateFormatOptions = {
-        dateStyle: "full",
-        timeStyle: "long",
+        weekday: "short",
+        month: "short",
+        day: "numeric",
+        year: "numeric",
+        hour: "numeric",
+        minute: "numeric",
+        timeZoneName: "short",
     };
 
     return (
@@ -25,20 +30,31 @@ const App = () => {
                 <Timestamp date={startDate} />
             </div>
             <div className="timestamp-converter">
-                <span>Convert Timestamp:</span>
-                <input
-                    id="converter"
-                    type="text"
-                    value={timestamp}
-                    onChange={(e) => setTimestamp(e.target.value)}
-                />
-                <div>Your local time: </div>
-                {timestamp
-                    ? new Date(timestamp * 1000).toLocaleDateString(
-                          locale,
-                          dateFormatOptions
-                      )
-                    : null}
+                <div className="timestamp-converter__cta">
+                    <span className="timestamp-converter__cta__title">
+                        Convert a Timestamp:
+                    </span>
+                    <input
+                        className="timestamp-converter__cta__input"
+                        id="converter"
+                        type="text"
+                        value={timestamp}
+                        onChange={(e) => setTimestamp(e.target.value)}
+                    />
+                </div>
+                <div className="timestamp-converter__results">
+                    <h3 className="timestamp-converter__results__title">
+                        Your local time
+                    </h3>
+                    <div className="timestamp-converter__results__value">
+                        {timestamp
+                            ? new Date(timestamp * 1000).toLocaleDateString(
+                                  locale,
+                                  dateFormatOptions
+                              )
+                            : null}
+                    </div>
+                </div>
             </div>
         </AppContainer>
     );
