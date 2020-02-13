@@ -10,6 +10,11 @@ const DatePicker = ({ startDate, setStartDate }) => {
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
     const withPortal = !(screenWidth >= 768);
 
+    const getInterval = () => {
+        const searchParams = new URLSearchParams(window.location.search);
+        return searchParams.get("timeInterval") || 15;
+    };
+
     useEffect(() => {
         const updateSize = () => {
             setScreenWidth(window.innerWidth);
@@ -27,7 +32,7 @@ const DatePicker = ({ startDate, setStartDate }) => {
                 onChangeRaw={(e) => e.preventDefault()}
                 onChange={(date) => setStartDate(date)}
                 showTimeSelect
-                timeIntervals={15}
+                timeIntervals={getInterval()}
                 timeCaption="Time"
                 dateFormat="MMMM d, yyyy h:mm aa"
                 withPortal={withPortal}
