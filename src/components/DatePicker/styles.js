@@ -6,7 +6,6 @@ const DatePickerContainer = styled.div`
     align-items: center;
 
     .date-input {
-        margin-left: 0.75rem;
         width: 175px;
         border: none;
         border-bottom: 1px solid #000000;
@@ -15,6 +14,10 @@ const DatePickerContainer = styled.div`
         color: transparent;
         text-shadow: 0 0 0 #000000;
         font-family: inherit;
+    }
+
+    @media (min-width: 768px) {
+        margin-right: 30px;
     }
 `;
 

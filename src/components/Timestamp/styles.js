@@ -2,12 +2,16 @@ import styled from "styled-components";
 
 const TimestampContainer = styled.div`
     display: flex;
-    margin-left: 25px;
     text-align: center;
+    margin-top: 2rem;
 
     .timestamp {
         display: inline;
         margin: 0;
+    }
+
+    @media (min-width: 768px) {
+        margin-top: 0;
     }
 `;
 
