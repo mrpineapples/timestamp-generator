@@ -3,15 +3,23 @@ import styled from "styled-components";
 const AppContainer = styled.div`
     display: block;
 
-    .content {
+    .timestamp-generator {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-top: 20px;
     }
 
+    .timestamp-converter {
+        input {
+            margin-left: 10px;
+            border: none;
+            border-bottom: 1px solid #000000;
+        }
+    }
+
     @media (min-width: 768px) {
-        .content {
+        .timestamp-generator {
             flex-direction: row;
             justify-content: center;
             margin-top: 0;
