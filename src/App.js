@@ -7,7 +7,7 @@ import AppContainer from "./styles";
 
 const App = () => {
     const [startDate, setStartDate] = useState(new Date());
-    const [timestamp, setTimestamp] = useState(null);
+    const [timestamp, setTimestamp] = useState("");
 
     return (
         <AppContainer>
