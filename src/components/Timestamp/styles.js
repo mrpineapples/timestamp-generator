@@ -7,7 +7,7 @@ const TimestampContainer = styled.div`
 
     .timestamp {
         display: inline;
-        margin: 0;
+        margin: 0 0 0 20px;
     }
 
     @media (min-width: 768px) {

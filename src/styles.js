@@ -11,7 +11,7 @@ const AppContainer = styled.div`
     }
 
     .timestamp-converter {
-        margin-top: 40px;
+        margin-top: 30px;
 
         &__cta {
             display: flex;
@@ -23,6 +23,7 @@ const AppContainer = styled.div`
                 border: none;
                 border-bottom: 1px solid #000000;
                 text-align: center;
+                font-size: 16px;
             }
         }
 
@@ -46,6 +47,14 @@ const AppContainer = styled.div`
 
             &__info {
                 margin-right: 15px;
+            }
+        }
+
+        .timestamp-converter {
+            &__cta {
+                &__input {
+                    font-size: 14px;
+                }
             }
         }
     }
