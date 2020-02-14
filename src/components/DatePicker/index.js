@@ -10,11 +10,6 @@ const DatePicker = ({ startDate, setStartDate }) => {
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
     const withPortal = !(screenWidth >= 768);
 
-    const getInterval = () => {
-        const searchParams = new URLSearchParams(window.location.search);
-        return searchParams.get("timeInterval") || 15;
-    };
-
     useEffect(() => {
         const updateSize = () => {
             setScreenWidth(window.innerWidth);
@@ -23,6 +18,18 @@ const DatePicker = ({ startDate, setStartDate }) => {
         window.addEventListener("resize", updateSize);
         return () => window.removeEventListener("resize", updateSize);
     });
+
+    useEffect(() => {
+        const dateInput = document.querySelector(".date-input");
+        if (dateInput) {
+            dateInput.readOnly = true;
+        }
+    });
+
+    const getInterval = () => {
+        const searchParams = new URLSearchParams(window.location.search);
+        return searchParams.get("timeInterval") || 15;
+    };
 
     return (
         <DatePickerContainer>
