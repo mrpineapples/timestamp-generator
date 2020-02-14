@@ -8,7 +8,7 @@ const DatePickerContainer = styled.div`
     .react-datepicker__portal {
         & > div {
             position: absolute;
-            top: 125px;
+            top: 150px;
         }
     }
 

@@ -18,7 +18,7 @@ const AppContainer = styled.div`
             justify-content: center;
 
             &__input {
-                width: 85px;
+                width: 100px;
                 margin-left: 10px;
                 border: none;
                 border-bottom: 1px solid #000000;
