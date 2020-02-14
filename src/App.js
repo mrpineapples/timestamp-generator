@@ -2,22 +2,12 @@ import React, { useState } from "react";
 import DatePicker from "./components/DatePicker";
 import Timestamp from "./components/Timestamp";
 import Header from "./components/Header";
+import TimestampConverter from "./components/TimestampConverter";
 import AppContainer from "./styles";
 
 const App = () => {
     const [startDate, setStartDate] = useState(new Date());
     const [timestamp, setTimestamp] = useState(null);
-
-    const locale = "en-US";
-    const dateFormatOptions = {
-        weekday: "short",
-        month: "short",
-        day: "numeric",
-        year: "numeric",
-        hour: "numeric",
-        minute: "numeric",
-        timeZoneName: "short",
-    };
 
     return (
         <AppContainer>
@@ -42,19 +32,14 @@ const App = () => {
                         onChange={(e) => setTimestamp(e.target.value)}
                     />
                 </div>
-                <div className="timestamp-converter__results">
-                    <h3 className="timestamp-converter__results__title">
-                        Your local time
-                    </h3>
-                    <div className="timestamp-converter__results__value">
-                        {timestamp
-                            ? new Date(timestamp * 1000).toLocaleDateString(
-                                  locale,
-                                  dateFormatOptions
-                              )
-                            : null}
+                {timestamp && (
+                    <div className="timestamp-converter__results">
+                        <h3 className="timestamp-converter__results__title">
+                            Your local time
+                        </h3>
+                        <TimestampConverter timestamp={timestamp} />
                     </div>
-                </div>
+                )}
             </div>
         </AppContainer>
     );

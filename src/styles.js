@@ -35,12 +35,6 @@ const AppContainer = styled.div`
                 margin: 0 auto;
                 border-bottom: 2px solid #000000;
             }
-
-            &__value {
-                margin-top: 10px;
-                text-align: center;
-                font-size: 14px;
-            }
         }
     }
 
